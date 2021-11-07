@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bun Bun Bakery Shop</title>
+        <link rel="stylesheet" href="styles.css">
+        <meta charset="UTF-8">
+        <script defer src="main.js"></script>
+    </head> 
+    <body>
+        <nav class="navBar">
+            <div class="navBar__column">
+                <a class="navBar__title" href="index.html">HOME</a>
+                <a class="navBar__title" href="menu.html">MENU</a>
+                <a class="navBar__title" href="about.html">ABOUT US</a>
+            </div>   
+            <div class="navBar__column">
+                <a class="navBar__title" href="account.html">ACCOUNT</a>
+                <a class="navBar__title" id="navBarCart" href="cart.html">CART</a> 
+                <a class="navBar__title" href="location.html">LOCATION</a>                
+            </div>
+        </nav>
+        <main>
+            <div class="page-top">                
+                <div class="page-title">
+                    Cart
+                </div>
+            </div>
+            
+            <section>
+                <div class="cart-item" id="cart-item">
+
+                    <!-- <div class="cart-item__column">
+                        <div class="cart-item__checkbox">
+                            <img id="cart-item__checkbox--activated" src="images/btn_checkbox_activated.jpg">
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="cart-item__column">
+                        <img class="cart-item__photo" id="cart-item__photo--id" src="images/menu_original.jpg" alt="photo of cart added items">
+                    </div> -->
+                    
+                    <!-- <div class="cart-item__column">
+                        <div class="cart-item__option--price">
+                            <div class="cart-item__option--title" id="cart-item__title--id">
+                                Original 
+                            </div>
+                            <div class="cart-item__option--price" id="cart-item__price--id">
+                                $3.75
+                            </div>
+                        </div>
+                        <div class="cart-item__option">
+                            Glaze: &nbsp; <span id="cart-item__glaze--id">None</span>
+                        </div>
+                        <div class="cart-item__option">
+                            Qty: &nbsp; <span id="cart-item__qty__dropdown--id">1</span>
+                        </div>
+                        <div class="cart-item__option">
+                            Free delivery
+                        </div>
+                        <div class="cart-item__remove">
+                            Remove 
+                        </div> 
+                    </div> -->
+
+                </div>
+
+            </section>
+            <section>
+                <div id="section-heading--cart-recommend">
+                    <div class="section-heading center">
+                        You should try Original flavor with Gluten-free
+                    </div>
+                </div>
+
+                <div class="card menu recommend-item">    
+                    <img class="menu-photo" src="images/menu_original.jpg" alt="topview of an original gluten free cinnamon roll">
+                    <div class="menu-title">Original (Gluten-Free)</div>
+                    <div class="menu-price">$3.75</div>
+                    <div class="menu-btn">
+                        <p class="menu-btn__title">Add to Cart</p>
+                    </div> 
+                </div>
+            </section>
+            <section>
+                <div class="divider">
+                </div>
+                <div class="cart-checkout">
+                    <div class="cart-checkout__list">
+                        <div class="cart-checkout__list__title">
+                            Subtotal
+                        </div>
+                        <div class="cart-checkout__list__description">
+                            $3.75
+                        </div>
+                    </div>
+                    <div class="cart-checkout__list">
+                        <div class="cart-checkout__list__title">
+                            Taxes
+                        </div>
+                        <div class="cart-checkout__list__description">
+                            Calculated at checkout
+                        </div>
+                    </div>
+                    <div class="cart-checkout__list">
+                        <div class="cart-checkout__list__title">
+                            Estimated total
+                        </div>
+                        <div class="cart-checkout__list__description">
+                            $3.75
+                        </div>
+                    </div>
+                    <div class="cart-checkout__btn">
+                        Checkout all items
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+        </footer>
+    </body>
+</html>

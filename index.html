@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bun Bun Bakery Shop</title>
+        <link rel="stylesheet" href="styles.css">
+        <meta charset="UTF-8">
+        <script defer src="main.js"></script>
+        <script>
+            // localStorage.setItem("addedItem", JSON.stringify(cartArray));
+        </script>
+    </head> 
+    <body>
+        <nav class="navBar">
+            <div class="navBar__column">
+                <a class="navBar__title" href="index.html">HOME</a>
+                <a class="navBar__title" href="menu.html">MENU</a>
+                <a class="navBar__title" href="about.html">ABOUT US</a>
+            </div>   
+            <div class="navBar__column">
+                <a class="navBar__title" href="account.html">ACCOUNT</a>
+                <a class="navBar__title" id="navBarCart" href="cart.html">CART</a> 
+                <a class="navBar__title" href="location.html">LOCATION</a>                
+            </div>
+        </nav>
+        <div class="hero--home">
+            <img class="hero--home__img" src="images/home_hero.png" alt="bakery kitchen">
+            <p class="hero--home__title"> 
+                Hello there! <br> 
+                We are Bun Bun Bakery Shop 
+            </p>
+        </div>
+        <main>
+            <section class="section--home">
+                <div class="section--home row">
+                    <div class="section--home__recommend">
+                        <h1 class="section-heading">Not sure what to have?</h1>
+                        <h5 class="section-subtitle">Check out our recommendations for you</h5>
+                    </div>
+                    <div class="section--home__operating-info"> 
+                        <h3 class="section--home__operating-info__hours">Hours &nbsp;&nbsp;<span>Open • 8am ~ 8pm</span></h3>
+                        <h3 class="section--home__operating-info__phone">Phone &nbsp;&nbsp;<span id="contact-phone">412.454.2233</span></h3>
+                    </div>
+                </div>
+                <div id="content-container">
+                    <div class="card menu-recommend">
+                        <img class="menu-photo" src="images/menu_original.jpg" alt="topview of an original cinnamon roll">
+                        <div class="recommend-topic">For your health</div>
+                        <div class="menu-title">Original (Gluten-Free)</div>
+                        <div class="menu-price">$3.75</div>
+                        <div class="menu-btn">
+                            <p class="menu-btn__title">Add to Cart</p>
+                        </div> 
+                    </div>
+                    <div class="card menu-recommend">
+                        <img class="menu-photo" src="images/menu_blackberry.jpg" alt="topview of a blackberry cinnamon roll">
+                        <div class="recommend-topic">Loved by locals</div>
+                        <div class="menu-title">Blackberry</div>
+                        <div class="menu-price">$4.50</div>
+                        <div class="menu-btn">
+                            <p class="menu-btn__title">Add to Cart</p>
+                        </div> 
+                    </div>
+                    <div class="btn-circle-area">
+                        <div class="btn-circle">
+                            <div class="btn-circle__title">Find more</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+        </footer>
+
+    </body>
+</html>

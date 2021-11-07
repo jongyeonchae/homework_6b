@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bun Bun Bakery Shop</title>
+        <link rel="stylesheet" href="styles.css">
+        <meta charset="UTF-8">
+        <script defer src="main.js"></script>
+    </head> 
+    <body>
+        <nav class="navBar">
+            <div class="navBar__column">
+                <a class="navBar__title" href="index.html">HOME</a>
+                <a class="navBar__title" href="menu.html">MENU</a>
+                <a class="navBar__title" href="about.html">ABOUT US</a>
+            </div>   
+            <div class="navBar__column">
+                <a class="navBar__title" href="account.html">ACCOUNT</a>
+                <a class="navBar__title" id="navBarCart" href="cart.html">CART</a> 
+                <a class="navBar__title" href="location.html">LOCATION</a>                
+            </div>
+        </nav>
+        <main>
+            <div class="page-title">
+                Original
+            </div>
+            <section id="content-container">
+                <div class="content-container__column">
+                    <img class="product-photo" id="large-photo" src="images/menu_original.jpg"  alt="topview of an original cinnamon roll">
+                </div>
+                <div class="content-container__column">
+                    <div class="product-option">
+                        <div class="option-title">
+                            Price($)
+                        </div>
+                        <div class="option-content">
+                            3.50
+                        </div>
+                    </div>
+                    <div class="product-option">
+                        <div class="option-title">
+                            Delivery
+                        </div>
+                        <div class="option-content">
+                            Free <br>
+                            <p class="option-content--delivery-info"> Order now and get it delivered today!</p>
+                        </div>    
+                    </div>
+
+                    <div class="product-option--qty">
+                        <div class="option-title">
+                            Qty
+                        </div>
+                        <div class="option-content--qty">
+                            <input type="radio" id="one" name="qtys" value="1" onclick="updatePrice(1)" checked>
+                            <label for="one">1</label>
+                        
+                            <input type="radio" id="three" name="qtys" value="3" onclick="updatePrice(3)">
+                            <label for="three">3</label>
+                       
+                            <input type="radio" id="six" name="qtys" value="6" onclick="updatePrice(6)">
+                            <label for="six">6</label>
+                       
+                            <input type="radio" id="twelve" name="qtys" value="12" onclick="updatePrice(12)">
+                            <label for="twelve">12</label>
+                        </div>
+                    </div>
+
+                    <div class="product-option">
+                        <form class="product-option--glaze" action="">
+                            <label for="option-title--glaze" class="option-title">Glaze</label>
+                            <select name="glazes" id="option-title--glaze" onChange="updatePhoto(this.value)">
+                                <option value="none" selected > None </option>
+                                <option value="sugar-milk" > Sugar-milk </option>
+                                <option value="vanilla-milk" > Vanilla-milk </option>
+                                <option value="double-chocolate" > Double Chocolate </option>
+                            </select> 
+                        </form>
+                    </div>
+
+                    <div class="product-option">
+                        <div class="option-title">
+                            Total($)
+                        </div>
+                        <div id="totalPrice" class="option-content">
+                            3.50
+                        </div>
+                    </div>
+                    <button class="product-option__cart-btn" onclick="addToCart('Original')">
+                        Add to Cart
+                    </button>
+                </div>
+            </section>
+
+            <section>
+                <div id="section-heading--description">
+                    <div class="section-heading">
+                        Description
+                    </div>
+                </div>
+                <div class="description">
+                    We've been baking our hand-rolled Signature Cinnamon roll in our bakery since the very beginning. 
+                    Our unique twist on the classic cinnamon roll includes such gourmet touches as adding applesauce 
+                    to the nuts and cinnamon sugar filling and brushing the top of the loaf with clarified butter just 
+                    before it goes into the oven.
+                </div>
+            </section>
+
+            <section>
+                <div id="section-heading--ingredients">
+                    <div class="section-heading">
+                        Ingredients
+                    </div>
+                </div>
+                <div class="ingredients">
+                    Cinnamon Roll (Wheat Flour, Sugar, Whole Milk, Eggs, Palm Fat, Butter [Milk], Sunflower Oil, Water, Yeast,
+                    Coconut and Palm Fat, Coconut Fat, Rapeseed Oil, Cinnamon, Modified Starch, Wheat Starch, Sea Salt, Buttermilk Powder.
+                </div>
+            </section>
+
+            <section>
+                <div id="section-heading--review">
+                    <div class="section-heading"> 2 Reviews </div>
+                </div>
+                <div class="review--avatar">
+                    <div class="review--avatar__personal-info">
+                        <div class="review--avatar__column">
+                            <img class="review--avatar-icon" src="images/avatar.png" alt="avatar">
+                        </div>
+                        <div class="review--avatar__column">
+                            <div class="review--avatar-name">
+                                Louetta
+                            </div>
+                            <div class="review--avatar-date">
+                                Reviewed September 22
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="reveiew--avatar__ratings">
+                        <img class="review-ratings" src="images/ratings-star.png" alt="review stars">
+                    </div>
+                    <div class="review--avatar__detail">
+                        Just visited and saw online some recommendations specifically for the original flavor. 
+                        All I can say is wow! We bought 3 original rolls, 1 blackberry roll, and a walnut roll. 
+                        Everything was absolutely exceptional. This is a must visit place five stars no doubt.
+                    </div>
+                </div>
+                <div class="review--avatar">
+                    <div class="review--avatar__personal-info">
+                        <div class="review--avatar__column">
+                            <img class="review--avatar-icon" src="images/avatar.png" alt="avatar">
+                        </div>
+                        <div class="review--avatar__column">
+                            <div class="review--avatar-name">
+                                Travis
+                            </div>
+                            <div class="review--avatar-date">
+                                Reviewed September 20
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="reveiew--avatar__ratings">
+                        <img class="review-ratings" src="images/ratings-star.png" alt="review stars">
+                    </div>
+                    <div class="review--avatar__detail">
+                        The perfect late night hunger fix! I have had a LOT of rolls in my life, so I have a pretty high bar. 
+                        However, this place really exceeded my expectations. The original flavor is my favorite. Everything tasted fresh 
+                        and I will definitely be back! 
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div id="section-heading--review">
+                    <div class="section-heading"> You may also like </div>
+                </div>
+                <div id="content-container">
+                    <div class="card menu">
+                        <img class="menu-photo" src="images/menu_original.jpg" alt="topview of an original cinnamon roll">
+                        <div class="menu-title">Original (Gluten-Free)</div>
+                        <div class="menu-price">$3.75</div>
+                        <div class="menu-btn">
+                            <p class="menu-btn__title">Add to Cart</p>
+                        </div> 
+                    </div>
+                    <div class="card menu">
+                        <img class="menu-photo" src="images/menu_blackberry.jpg" alt="topview of a blackberry cinnamon roll">
+                        <div class="menu-title">Blackberry</div>
+                        <div class="menu-price">$4.50</div>
+                        <div class="menu-btn">
+                            <p class="menu-btn__title">Add to Cart</p>
+                        </div> 
+                    </div>
+                    <div class="card menu">
+                        <img class="menu-photo" src="images/menu_walnut.jpg"  alt="topview of a walnut cinnamon roll">
+                        <div class="menu-title">Walnut</div>
+                        <div class="menu-price">$4.00</div>
+                        <div class="menu-btn">
+                            <p class="menu-btn__title">Add to Cart</p>
+                        </div> 
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+        </footer>
+    </body>
+</html>
