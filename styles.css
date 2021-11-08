@@ -116,6 +116,7 @@ button {
 
 #cart-item__wrapper {
   display: flex;
+  justify-content: space-between;
 }
 
 .cart-item__checkbox {
@@ -230,11 +231,12 @@ footer {
 
 .hero--home__title {
   position: relative;
-  left: 220px;
+  /* left: 220px; */
   bottom: 220px;
   font-size: 40px;
   font-weight: 600;
   color: white;
+  padding-left: 220px;
 }
 
 .ingredients {
@@ -283,7 +285,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1440px;
+  width: 1366px;
   height: 52px;
 }
 
