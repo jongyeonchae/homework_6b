@@ -78,15 +78,13 @@ function updateCartLabel() {
 }
 updateCartLabel();
 
-/////////////////////////////////////////////////////////////////////
-
 //update cart-item
 function updateCartItem() {
   cartArray = JSON.parse(localStorage.getItem("addedItem") || "[]");
   // console.log(cartArray);
   var item = document.getElementById("cart-item");
   console.log(item);
-  item.textContent = "";
+  item.innerHTML = "";
 
   for (let i = 0; i < cartArray.length; i++) {
     // var cartItemPhoto = document.getElementById("cart-item__photo--id");
@@ -100,42 +98,53 @@ function updateCartItem() {
     // cartItemGlaze.innerHTML = cartArray[i].glazing;
     // cartItemQty.innerHTML = cartArray[i].qty;
 
-    item.append(
+    item.innerHTML +=
       `
-      <div class="cart-item__column">
-        <div class="cart-item__checkbox">
-            <img id="cart-item__checkbox--activated" src="images/btn_checkbox_activated.jpg">
+      <div id="cart-item__wrapper">
+        <div class="cart-item__column">
+          <div class="cart-item__checkbox">
+              <img id="cart-item__checkbox--activated" src="images/btn_checkbox_activated.jpg">
+          </div>
         </div>
-      </div>
 
-      <div class="cart-item__column">
-        <img class="cart-item__photo" id="cart-item__photo--id" src="images/menu_original.jpg" alt="photo of cart added items">
-      </div>
-  
-      <div class="cart-item__column">
-        <div class="cart-item__option--price">
-          <div class="cart-item__option--title" id="cart-item__title--id">
-              Original 
+        <div class="cart-item__column">
+          <img class="cart-item__photo" id="cart-item__photo--id" src="` +
+      cartArray[i].photo +
+      ` " alt="photo of cart added items">
+        </div>
+    
+        <div class="cart-item__column">
+          <div class="cart-item__option--price">
+            <div class="cart-item__option--title" id="cart-item__title--id">
+                ` +
+      cartArray[i].name +
+      ` 
+            </div>
+            <div class="cart-item__option--price" id="cart-item__price--id">
+            ` +
+      cartArray[i].price +
+      ` 
+            </div>
           </div>
-          <div class="cart-item__option--price" id="cart-item__price--id">
-              $3.75
+          <div class="cart-item__option">
+            Glaze: &nbsp; <span id="cart-item__glaze--id">` +
+      cartArray[i].glazing +
+      ` </span>
           </div>
+          <div class="cart-item__option">
+            Qty: &nbsp; <span id="cart-item__qty__dropdown--id">` +
+      cartArray[i].qty +
+      ` </span>
+          </div>
+          <div class="cart-item__option">
+            Free delivery
+          </div>
+          <div class="cart-item__remove">
+            Remove 
+          </div> 
         </div>
-        <div class="cart-item__option">
-          Glaze: &nbsp; <span id="cart-item__glaze--id">None</span>
-        </div>
-        <div class="cart-item__option">
-          Qty: &nbsp; <span id="cart-item__qty__dropdown--id">1</span>
-        </div>
-        <div class="cart-item__option">
-          Free delivery
-        </div>
-        <div class="cart-item__remove">
-          Remove 
-       </div> 
       </div>
-      `
-    );
+      `;
   }
   if (cartArray.length == 0) {
     item.append(
@@ -149,3 +158,5 @@ function updateCartItem() {
 updateCartItem();
 
 //remove cart-item
+
+// update navcart in every page

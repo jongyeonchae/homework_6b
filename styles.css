@@ -108,10 +108,14 @@ button {
 
 .cart-item {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   width: 830px;
   margin: auto;
+}
+
+#cart-item__wrapper {
+  display: flex;
 }
 
 .cart-item__checkbox {
