@@ -155,3 +155,21 @@ function removeCartItem(i) {
   localStorage.setItem("addedItem", JSON.stringify(cartArray));
   location.reload();
 }
+
+function totalPriceInCart() {
+  cartArray = JSON.parse(localStorage.getItem("addedItem") || "[]");
+  console.log("Prices: ");
+  var totalPrice = 0;
+  for (var i = 0; i < cartArray.length; i++) {
+    //go through each food items
+
+    var pricevalue = cartArray[i].price; //get the price from each items
+    var simpleprice = pricevalue.replace(/^\D+/g, ""); //convert it into string without complex formatting
+    totalPrice += parseFloat(simpleprice); //parseFloat turns string into 0.00 and we add it to total price
+  }
+  console.log("Total price: " + totalPrice); //for testing purposes, printing out the total price
+
+  document.getElementById("sub-total").innerHTML = "$" + totalPrice;
+  document.getElementById("est-total").innerHTML = "$" + totalPrice;
+}
+totalPriceInCart();
