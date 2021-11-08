@@ -7,7 +7,6 @@ function updatePhoto() {
 }
 
 function updatePrice(selectedQty) {
-  //   var price = document.getElementsByClassName("option-content")[2];
   var price = document.getElementById("totalPrice");
 
   if (selectedQty == "1") {
@@ -87,16 +86,9 @@ function updateCartItem() {
   item.innerHTML = "";
 
   for (let i = 0; i < cartArray.length; i++) {
-    // var cartItemPhoto = document.getElementById("cart-item__photo--id");
-    // // var cartItemName = document.getElementById("cart-item__title--id");
-    // var cartItemPrice = document.getElementById("cart-item__price--id");
-    // var cartItemGlaze = document.getElementById("cart-item__glaze--id");
-    // var cartItemQty = document.getElementById("cart-item__qty__dropdown--id");
-
-    // cartItemPhoto.src = cartArray[i].photo;
-    // cartItemPrice.innerHTML = cartArray[i].price;
-    // cartItemGlaze.innerHTML = cartArray[i].glazing;
-    // cartItemQty.innerHTML = cartArray[i].qty;
+    if (cartArray[i].price[0] != "$") {
+      cartArray[i].price = "$" + cartArray[i].price;
+    }
 
     item.innerHTML +=
       `
@@ -139,7 +131,9 @@ function updateCartItem() {
           <div class="cart-item__option">
             Free delivery
           </div>
-          <div class="cart-item__remove">
+          <div class="cart-item__remove" onClick="removeCartItem(` +
+      i +
+      `)">
             Remove 
           </div> 
         </div>
@@ -147,16 +141,17 @@ function updateCartItem() {
       `;
   }
   if (cartArray.length == 0) {
-    item.append(
-      `
+    item.innerHTML += `
       <span>Empty!</span>
-      `
-    );
+      `;
   }
 }
 
 updateCartItem();
 
-//remove cart-item
-
-// update navcart in every page
+function removeCartItem(i) {
+  cartArray = JSON.parse(localStorage.getItem("addedItem") || "[]");
+  cartArray.splice(i, 1);
+  localStorage.setItem("addedItem", JSON.stringify(cartArray));
+  location.reload();
+}
